@@ -3,6 +3,7 @@ class Fixnum
     score = self
     allergies=[]
 
+    if score > 0
     until score.==(0) do
 
       if score.>=(128)
@@ -44,9 +45,10 @@ class Fixnum
         allergies.push("eggs")
         score = score.%(1)
       end
-
-
-  end
+    end
+      else
+    allergies.push("Invalid entry")
+      end
     allergies
   end
 end
